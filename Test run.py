@@ -1,14 +1,23 @@
 import matplotlib.pyplot as plt
 
-no_breeding = int(input("Number of breeding: "))
-no_feeding = int(input("Number of feeding: "))
-no_mating = int(input("Number of mating: "))
+A = {('Sep', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 1, ('Sep', 'Resting', 'Haematopus longirostris/Australian Pied Oystercatcher'): 1, ('May', 'Flying', 'Haematopus longirostris/Australian Pied Oystercatcher'): 2, ('Jan', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 1, ('Feb', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 1, ('Mar', 'Flying', 'Haematopus longirostris/Australian Pied Oystercatcher'): 2, ('Apr', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 3, ('Aug', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 2, ('Apr', 'Resting', 'Haematopus longirostris/Australian Pied Oystercatcher'): 3, ('May', 'Resting', 'Haematopus longirostris/Australian Pied Oystercatcher'): 6, ('Oct', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 1, ('May', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 16, ('Mar', 'Resting', 'Haematopus longirostris/Australian Pied Oystercatcher'): 20, ('Oct', 'Resting', 'Haematopus longirostris/Australian Pied Oystercatcher'): 5, ('Mar', 'Feed', 'Haematopus longirostris/Australian Pied Oystercatcher'): 7, ('Apr', 'Flying', 'Haematopus longirostris/Australian Pied Oystercatcher'): 1}
 
-a = 'Feeding'
-b = 'Mating'
-c = 'Breeding'
+A = list(A.items())
 
-D = {c: no_breeding,  a: no_feeding, b: no_mating}
+B = []
+
+for item in A:
+    if item[0][1] == "Feed":
+        B.append((item[0][0],item[1]))
+
+
+
+D = {}
+
+for month in B:
+    D[month[0]]=month[1]
+
+print(D)
 
 
 plt.bar(range(len(D)), D.values(), align='center')
