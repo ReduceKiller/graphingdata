@@ -10,17 +10,21 @@ for item in A:
     if item[0][1] == "Feed":
         B.append((item[0][0],item[1]))
 
+months = {'Sep': '09', 'Nov': '11', 'Feb': '02', 'Oct': '10', 'Jul': '07', 'Aug': '08', 'Mar': '03', 'May': '05', 'Jan': '01', 'Jun': '06', 'Dec': '12', 'Apr': '04'}
 
+C = []
 
-D = {}
+for item in B:
+    C.append((months[item[0]],item[0],item[1]))
 
-for month in B:
-    D[month[0]]=month[1]
+C.sort()
 
-print(D)
+print(C)
 
-
+'''
 plt.bar(range(len(D)), D.values(), align='center')
 plt.xticks(range(len(D)), list(D.keys()))
 
 plt.show()
+
+'''
