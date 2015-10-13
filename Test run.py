@@ -8,13 +8,9 @@ C = {'Oct, Feed': 1,  'Resting': 1, 'Flying': 2}
 #title2 = input("Title of the graph?: ")
 #xlabel = input("")
 
-letter = c[0]
-
-print(letter)
 
 
 
-'''
 
 for a in range(0,2):
     stored_color = False
@@ -33,6 +29,11 @@ for a in range(0,2):
 
 
 plt.show()
+
+
+
+
+
 
 '''
 
